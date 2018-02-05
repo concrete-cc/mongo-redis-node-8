@@ -1,4 +1,4 @@
-FROM mongo:3.4.10
+FROM mongo:3.4
 
 # Install Redis 3.2.11
 # ====================
