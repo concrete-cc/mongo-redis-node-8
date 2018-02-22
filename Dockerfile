@@ -80,9 +80,10 @@ RUN \
         apt-get install -y nodejs
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
-ENV PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+ENV PATH="/root/.yarn/bin:/root/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Put your app's code in this directory!
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN npm install -g mkg20001/wait-for-mongo wait-for-redis
+RUN yarn global add mkg20001/wait-for-mongo wait-for-redis
