@@ -80,6 +80,7 @@ RUN \
         apt-get install -y nodejs
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+ENV PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Put your app's code in this directory!
 RUN mkdir -p /usr/src/app
