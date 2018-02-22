@@ -77,7 +77,9 @@ RUN \
         apt-get update > dev/null && \
         apt-get install -y git curl python3-pip build-essential libssl-dev libffi-dev python-dev software-properties-common zip && \
         curl -sL https://deb.nodesource.com/setup_8.x | bash && \
-        apt-get install -y nodejs yarn
+        apt-get install -y nodejs
+
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
 # Put your app's code in this directory!
 RUN mkdir -p /usr/src/app
